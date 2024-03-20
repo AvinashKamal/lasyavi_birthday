@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Namaste';
+    src: url('/AnandaNamaste.ttf') format('truetype');
+}
+
+h1 {
+	font-family: 'Namaste', sans-serif;
+	font-size: 3rem;
+	color: #1C3676;
+}
+
+.hero {
+	height: calc(100vh - 32px);
+}
+
+.timer-card {
+	text-align: center;
+	color: #FFF;
+}
+
+.countdown-timer {
+	/*max-width: 60%;*/
+	/*margin: 0 auto;*/
+	grid-template-columns: repeat(4, 1fr);
+	border: 10px solid black;
+	padding: 2rem;
+	border-image: url("/frame.svg")	24 stretch;
+}
+
+.border-bg {
+	height: 60px;
+	width: 100%;
+	background: url("/bg-2.svg") repeat;
+	background-size: contain;
+}
+
+.border-bg-2 {
+	height: 300px;
+	width: 300px;
+	background: url("/bg-1.svg") repeat;
+	background-size: contain;
+	transform: translate(45%, 45%);
+}
+
+.border-bg-3 {
+	height: 300px;
+	width: 300px;
+	background: url("/bg-1.svg") repeat;
+	background-size: contain;
+	transform: translate(-45%, 45%);
+}
+
+.border-bg-circle-1 {
+	height: 300px;
+	width: 300px;
+	background: url("/bg-3.svg") repeat;
+	background-size: contain;
+	animation: rotate 30s linear infinite;
+}
+
+.border-bg-2-wrapper {
+	transform: translate(45%, -45%);
+}
+.border-bg-1-wrapper {
+	transform: translate(-45%, 45%);
+}
+
+.border-bg-circle-2 {
+	height: 300px;
+	width: 300px;
+	background: url("/bg-3.svg") repeat;
+	background-size: contain;
+	animation: rotate 30s linear infinite;
+}
+
+.bg-pattern {
+	background: url("/pattern.svg") repeat;
+	background-size: cover;
+	bottom: 0;
+	right: 0;
+	opacity: 0.3;
+}
+
+.location-image {
+	border: 100px solid black;
+	border-image: url("/venue-border.svg") 30 stretch;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
