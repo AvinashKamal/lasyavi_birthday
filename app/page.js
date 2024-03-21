@@ -63,7 +63,7 @@ export default function Home() {
 					</motion.h1>
 
 					<motion.img
-						className={'hero-bg-1 absolute bottom-0 md:right-10 md:bottom-[unset] z-20'}
+						className={'hero-bg-1 absolute bottom-0 md:right-0 md:bottom-[unset] z-20'}
 						src={'/bg-1.svg'}
 						alt={'Hero Image BG'}
 						width={500}
@@ -77,16 +77,20 @@ export default function Home() {
 						}}
 					/>
 					{/*{isBGVisible && (*/}
-						<motion.img
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 1 }}
+						className={'z-50'}
+					>
+						<Image
 							src={'/hero-img.png'}
 							alt={'Laasyavi'}
 							width={600}
 							height={600}
-							className={'z-50'}
-							initial={{ opacity: 0, y: -100 }} // Slide in from the left
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 1 }}
+							fetchPriority={'high'}
 						/>
+					</motion.div>
 					{/*)}*/}
 				</div>
 			</section>
