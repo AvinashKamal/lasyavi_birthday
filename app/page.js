@@ -1,6 +1,10 @@
+'use client';
+
 import Image from "next/image";
 import Countdown from "@/components/Countdown";
 import ImageGallery from "@/components/ImageGallery";
+import { motion } from 'framer-motion'
+import {useState} from "react";
 
 const images = [
 	{
@@ -43,16 +47,47 @@ const images = [
 
 export default function Home() {
 	const targetDate = new Date('2024-03-24');
+	const [isBGVisible, setIsBGVisible] = useState(false);
 	return (
 		<>
 			<section className={'bg-gradient-to-r from-[#1E0074] to-[#1E009F] min-h-screen p-4 relative overflow-hidden'}>
 				<div className="bg-pattern absolute top-0 left-0 right-0 bottom-0 z-0"/>
-				<div className={'hero max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center relative'}>
-					<h1 className={'text-[48px] md:text-[64px] lg:text-[96px] text-center lg:text-left text-white z-50'}>Lasyavi's
-						1st Birthday</h1>
-					<div className={'z-20 w-[500px] h-[500px]'}/>
-					<Image className={'absolute bottom-0 md:right-0 md:bottom-[unset] z-20'} src={'/bg-1.svg'} alt={'Hero Image'}
-								 width={500} height={500}/>
+				<div className={'hero max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center relative'}>
+					<motion.h1
+						initial={{ opacity: 0, x: -50 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ duration: 1, ease: "easeOut" }}
+						className={'text-[48px] md:text-[64px] lg:text-[96px] text-center lg:text-left text-white z-50'}
+					>
+						Laasyavi's 1st Birthday
+					</motion.h1>
+
+					<motion.img
+						className={'hero-bg-1 absolute bottom-0 md:right-10 md:bottom-[unset] z-20'}
+						src={'/bg-1.svg'}
+						alt={'Hero Image BG'}
+						width={500}
+						height={500}
+						initial={{ opacity: 0, x: 100 }} // Slide in from the right
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ duration: 1 }}
+						onLoad={() => {
+							console.log('loaded');
+							setIsBGVisible(true)
+						}}
+					/>
+					{/*{isBGVisible && (*/}
+						<motion.img
+							src={'/hero-img.png'}
+							alt={'Laasyavi'}
+							width={600}
+							height={600}
+							className={'z-50'}
+							initial={{ opacity: 0, y: -100 }} // Slide in from the left
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 1 }}
+						/>
+					{/*)}*/}
 				</div>
 			</section>
 			<div className="gallery relative overflow-hidden p-4 py-8">
@@ -92,29 +127,16 @@ export default function Home() {
 				<div className={'max-w-7xl mx-auto p-4 py-16 relative flex flex-col gap-24'}>
 					<div
 						className="about-section-1 flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-24 items-center justify-center">
-						<Image src={'/about-bg-1.svg'} alt={'About frame'} width={500} height={500}/>
+						<Image src={'/exp-image.jpg'} alt={'About frame'} width={500} height={500}/>
 						<div className="about-content">
-							<h1 className={'text-7xl mb-3 text-center md:text-left'}>Sahith</h1>
-							<p className={'mb-5 text-center md:text-left'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Consectetur
-								dicta dolorem eligendi facere
-								mollitia. Debitis fuga inventore itaque iusto mollitia pariatur, quae reiciendis repellendus saepe sed,
-								unde
-								veniam vero voluptatibus.</p>
+							<h1 className={'text-7xl mb-3 text-center md:text-left'}>Our Experience</h1>
+							<p className={'mb-5 text-center md:text-left'}>
+								This past year with Laasyavi has been a whirlwind of wonder. We can hardly believe it's been twelve months since we first held her tiny hand in ours. The journey of parenthood has been filled with sleepless nights, overflowing hearts, and a love that grows stronger with each passing day.
+							</p>
+							<p className={'mb-5 text-center md:text-left'}>
+								Watching Laasyavi explore the world, learn new things, and develop her own little personality has been the most incredible adventure. We feel incredibly blessed to be her parents and can't wait to see what the next year holds!
+							</p>
 						</div>
-					</div>
-					<div
-						className="about-section-2 flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-24 items-center justify-center">
-						<div className="about-content">
-							<h1 className={'text-7xl mb-3 text-center md:text-left'}>Ravali</h1>
-							<p className={'mb-5 text-center md:text-left'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Consectetur
-								dicta dolorem eligendi facere
-								mollitia. Debitis fuga inventore itaque iusto mollitia pariatur, quae reiciendis repellendus saepe sed,
-								unde
-								veniam vero voluptatibus.</p>
-						</div>
-						<Image src={'/about-bg-2.svg'} alt={'About frame 2'} width={500} height={500}/>
 					</div>
 				</div>
 			</div>

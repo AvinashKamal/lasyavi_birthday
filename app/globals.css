@@ -62,6 +62,10 @@ h1 {
 	animation: rotate 30s linear infinite;
 }
 
+.hero-bg-1 {
+	animation: rotate 30s linear infinite;
+}
+
 .border-bg-2-wrapper {
 	transform: translate(45%, -45%);
 }
