@@ -1,54 +1,74 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
-const ImageGallery = ({ images }) => {
+const ImageGallery = ({images}) => {
 	const [isDesktop, setIsDesktop] = useState(false);
+	let sliderRef = useRef(null);
+	const next = () => {
+		sliderRef.slickNext();
+	};
+	const previous = () => {
+		sliderRef.slickPrev();
+	};
 
-	useEffect(() => {
-		const mediaQuery = window.matchMedia('(min-width: 768px)');
-		setIsDesktop(mediaQuery.matches);
-		mediaQuery.addEventListener('change', (e) => setIsDesktop(e.matches));
-	}, []);
+	// const visible = (index) => ();
 
 	const carouselSettings = {
-		dots: false,
-		// infinite: true,
+		infinite: true,
+		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		// autoplay: true,
-		// autoplaySpeed: 3000,
-		arrows: true,
+		arrows: false,
 	};
 
 	return (
-		<div className="py-8">
-			{isDesktop ? (
-				<div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+		<>
+			<div className="py-8 max-w-[1000px] md:max-w-[80%] mx-auto relative">
+				<Slider
+					ref={slider => {
+						sliderRef = slider;
+					}}
+					{...carouselSettings}
+				>
 					{images.map((image, index) => (
-						<img src={image.src} alt={image.alt} key={index} className="w-full rounded-2xl" />
-					))}
-				</div>
-			) : (
-				<Slider {...carouselSettings}>
-					{images.map((image, index) => (
-						<div key={index} className={'rounded-lg p-4'}>
-							<img
+						<div key={index} className={'w-full rounded-2xl'}>
+							<Image
 								src={image.src}
 								alt={image.alt}
-								className="w-full h-full rounded-2xl"
-								width={300}
-								height={300}
+								className="w-full h-full rounded-2xl object-contain aspect-[4/3]"
+								width={200}
+								height={200}
+								fetchPriority={'high'}
 							/>
 						</div>
 					))}
 				</Slider>
-			)}
-		</div>
+				<ChevronLeft
+					onClick={previous}
+					sx={{
+						fontSize: '4rem',
+						color: '#1E0074',
+					}}
+					className={'absolute bottom-0 left-0 z-50'}
+				/>
+				<ChevronRight
+					onClick={next}
+					sx={{
+						fontSize: '4rem',
+						color: '#1E0074',
+					}}
+					className={'absolute bottom-0 right-0 z-50'}
+				/>
+			</div>
+		</>
 	);
 };
+import 'slick-carousel/slick/slick.css';
+
+import 'slick-carousel/slick/slick-theme.css';
+import {ChevronLeft, ChevronRight} from "@mui/icons-material";
+import Image from "next/image";
 
 export default ImageGallery;
