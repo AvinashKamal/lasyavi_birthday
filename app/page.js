@@ -185,7 +185,7 @@ export default function Home() {
 				/>
 				<div className={'max-w-7xl mx-auto p-4 py-16 relative flex flex-col gap-4'}>
 					<h3 className={'text-[36px] md:text-[48px] lg:text-[64px] text-center mb-3 text-white'}>Party Venue</h3>
-					<p className={'text-center max-w-[60%] mx-auto mb-5 text-white'}>With hearts full of joy, we invite you to
+					<p className={'text-center md:max-w-[60%] mx-auto mb-5 text-white'}>With hearts full of joy, we invite you to
 						join us as we celebrate Laasyavi's first birthday. Prepare for a joyous occasion filled with laughter, love,
 						and the warmth of good company.
 					</p>
