@@ -151,10 +151,9 @@ export default function Home() {
 				<div className="border-bg-3 absolute bottom-0 left-0"/>
 				<div className={'max-w-7xl mx-auto p-4 py-16 relative flex flex-col items-center gap-4'}>
 					<h1 className={'text-[36px] text-center mb-3 text-white'}>You are invited</h1>
-					<p className={'text-center md:max-w-[60%] mx-auto mb-5 text-white'}>Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Consectetur dicta dolorem eligendi facere
-						mollitia. Debitis fuga inventore itaque iusto mollitia pariatur, quae reiciendis repellendus saepe sed, unde
-						veniam vero voluptatibus.</p>
+					<p className={'text-center md:max-w-[60%] mx-auto mb-5 text-white'}>It's hard to believe, but Laasyavi is
+						turning one! Join us as we celebrate this precious milestone and mark the beginning of many more adventures
+						to come.</p>
 					<Countdown targetDate={targetDate}/>
 				</div>
 			</div>
@@ -164,7 +163,8 @@ export default function Home() {
 						className="about-section-1 flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-24 items-center justify-center">
 						<Image src={'/sahith.svg'} alt={'About frame'} width={500} height={500}/>
 						<div className="about-content">
-							<h3 className={'text-[36px] md:text-[48px] lg:text-[64px] mb-3 text-center md:text-left'}>Our Experience</h3>
+							<h3 className={'text-[36px] md:text-[48px] lg:text-[64px] mb-3 text-center md:text-left'}>Our
+								Experience</h3>
 							<p className={'mb-5 text-center md:text-left'}>
 								This past year with Laasyavi has been a whirlwind of wonder. We can hardly believe it's been twelve
 								months since we first held her tiny hand in ours. The journey of parenthood has been filled with
@@ -185,10 +185,9 @@ export default function Home() {
 				/>
 				<div className={'max-w-7xl mx-auto p-4 py-16 relative flex flex-col gap-4'}>
 					<h3 className={'text-[36px] md:text-[48px] lg:text-[64px] text-center mb-3 text-white'}>Party Venue</h3>
-					<p className={'text-center max-w-[60%] mx-auto mb-5 text-white'}>Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Consectetur dicta dolorem eligendi facere
-						mollitia. Debitis fuga inventore itaque iusto mollitia pariatur, quae reiciendis repellendus saepe sed, unde
-						veniam vero voluptatibus.
+					<p className={'text-center max-w-[60%] mx-auto mb-5 text-white'}>With hearts full of joy, we invite you to
+						join us as we celebrate Laasyavi's first birthday. Prepare for a joyous occasion filled with laughter, love,
+						and the warmth of good company.
 					</p>
 					<div className="location-info flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-24 items-center mt-5">
 						<Image
@@ -199,7 +198,8 @@ export default function Home() {
 						/>
 						<div className="location-content relative text-center lg:text-left">
 							<h3 className={'text-[28px] md:text-[36px] lg:text-[48px] mb-3 text-white'}>Nandana Banquet Hall</h3>
-							<p className={'mb-8 max-w-[60%] mx-auto md:max-w-[80%] md:mx-0  text-white'}>S.R Plaza, X" road, opposite Kakatiya
+							<p className={'mb-8 max-w-[60%] mx-auto md:max-w-[100%] md:mx-0  text-white'}>S.R Plaza, X" road, opposite
+								Kakatiya
 								University - SDLCE, Kakatiya University, Hanamkonda, Telangana 506009</p>
 							<a href="https://maps.app.goo.gl/HKsiGc7Ks5oPuTR7A" target="_blank" rel="noreferrer"
 								 className={' mt-4 text-[#1C3676] text-2xl text-center md:text-left py-2 px-4 bg-white font-600 rounded-md'}>Get
@@ -221,7 +221,8 @@ export default function Home() {
 						className="contact grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-12 md:gap-8 lg:gap-4">
 						<div className="info text-[#1C3676] flex flex-col gap-3 items-center">
 							<h1 className={'text-[28px] md:text-[36px] lg:text-[48px] mb-3'}>Get in touch</h1>
-							<a href={'tel:+91 984 222 2222'} className={'text-[#1C3676] text-2xl'}>Sahith: <span className={'text-[#a3a3a3] decoration-2 underline'}>+91
+							<a href={'tel:+91 984 222 2222'} className={'text-[#1C3676] text-2xl'}>Sahith: <span
+								className={'text-[#a3a3a3] decoration-2 underline'}>+91
 								984
 								222 2222</span></a>
 
@@ -232,14 +233,16 @@ export default function Home() {
 								222 2222</span></a>
 						</div>
 						<div className="party-time text-[#1C3676] flex flex-col gap-3 items-center">
-						<h3 className={`text-[28px] md:text-[36px] lg:text-[48px] mb-3`}>Party time</h3>
+							<h3 className={`text-[28px] md:text-[36px] lg:text-[48px] mb-3`}>Party time</h3>
 							<p className={'text-2xl mb-3 font-bold'}>Sunday, 24 March, 2024</p>
 							<p className={'text-xl font-bold'}>06:00 PM - After</p>
 						</div>
 						<div className="party-venue text-[#1C3676] flex flex-col gap-3 items-center">
 							<h3 className={'text-[28px] md:text-[36px] lg:text-[48px] mb-3'}>Party venue</h3>
 							<p className={'text-[18px] md:text-2xl mb-1 font-bold text-[#a3a3a3]'}>Nandana Banquet Hall</p>
-							<p className={'text-[16px] md:text-xl text-center text-[#a3a3a3] max-w-[60%] mx-auto md:max-w-[100%] md:mx-0'}>S.Rة, X" road, opposite Kakatiya University - SDLCE,
+							<p
+								className={'text-[16px] md:text-xl text-center text-[#a3a3a3] max-w-[60%] mx-auto md:max-w-[100%] md:mx-0'}>S.Rة,
+								X" road, opposite Kakatiya University - SDLCE,
 								Kakatiya University, Hanamkonda, Telangana 506009</p>
 						</div>
 					</div>

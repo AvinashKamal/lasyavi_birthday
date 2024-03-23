@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Namaste';
-    src: url('/AnandaNamaste.ttf') format('truetype');
+	font-family: 'Namaste';
+	src: url('/AnandaNamaste.ttf') format('truetype');
+	font-display: swap
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 	grid-template-columns: repeat(4, 1fr);
 	border: 10px solid black;
 	padding: 2rem;
-	border-image: url("/frame.svg")	24 stretch;
+	border-image: url("/frame.svg") 24 stretch;
 }
 
 .border-bg {
@@ -69,6 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 .border-bg-2-wrapper {
 	transform: translate(45%, -45%);
 }
+
 .border-bg-1-wrapper {
 	transform: translate(-45%, 45%);
 }
