@@ -195,6 +195,7 @@ export default function Home() {
 							alt={'Location'}
 							width={500}
 							height={500}
+							priority={true}
 						/>
 						<div className="location-content relative text-center lg:text-left">
 							<h3 className={'text-[28px] md:text-[36px] lg:text-[48px] mb-3 text-white'}>Nandana Banquet Hall</h3>
@@ -221,16 +222,8 @@ export default function Home() {
 						className="contact grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-12 md:gap-8 lg:gap-4">
 						<div className="info text-[#1C3676] flex flex-col gap-3 items-center">
 							<h1 className={'text-[28px] md:text-[36px] lg:text-[48px] mb-3'}>Get in touch</h1>
-							<a href={'tel:+91 984 222 2222'} className={'text-[#1C3676] text-2xl'}>Sahith: <span
-								className={'text-[#a3a3a3] decoration-2 underline'}>+91
-								984
-								222 2222</span></a>
-
-							<a href={'tel:+91 984 222 2222'}
-								 className={'text-[#1C3676] text-2xl'}>Ravali: <span
-								className={'text-[#a3a3a3] decoration-2 underline'}>+91
-								984
-								222 2222</span></a>
+							<a href={'tel:+91 91 950 511 6020'} className={'text-[#1C3676] text-2xl font-bold'}>Sahith: <span
+								className={'text-[#a3a3a3] decoration-2 underline'}>+91 950 511 6020</span></a>
 						</div>
 						<div className="party-time text-[#1C3676] flex flex-col gap-3 items-center">
 							<h3 className={`text-[28px] md:text-[36px] lg:text-[48px] mb-3`}>Party time</h3>
