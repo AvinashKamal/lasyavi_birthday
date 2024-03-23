@@ -191,7 +191,7 @@ export default function Home() {
 					</p>
 					<div className="location-info flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-24 items-center mt-5">
 						<Image
-							src={'/venue.svg'}
+							src={'/party-venue.svg'}
 							alt={'Location'}
 							width={500}
 							height={500}
